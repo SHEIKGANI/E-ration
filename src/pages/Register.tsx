@@ -56,6 +56,11 @@ const Register: React.FC = () => {
         return;
       }
 
+      if (!privacyAccepted) {
+        setShowPrivacyNotice(true);
+        return;
+      }
+
       // Store form data and proceed to OTP verification
       setFormData(data);
       setStep('otp');
