@@ -9,6 +9,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import ManageStocks from './pages/ManageStocks';
 import SlotBooking from './pages/SlotBooking';
 import ManageSlots from './pages/ManageSlots';
+import QRScanPage from './pages/QRScanPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/admin/stocks" element={<ManageStocks />} />
         <Route path="/slots" element={<SlotBooking />} />
         <Route path="/admin/slots" element={<ManageSlots />} />
+        <Route path="/admin/scan" element={<QRScanPage />} />
       </Routes>
     </div>
   );
