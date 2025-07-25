@@ -25,6 +25,8 @@ const Register: React.FC = () => {
   const [step, setStep] = useState<RegistrationStep>('form');
   const [formData, setFormData] = useState<RegisterFormData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [showPrivacyNotice, setShowPrivacyNotice] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const { register, handleSubmit, watch, formState: { errors } } = useForm<RegisterFormData>();
   const [documents, setDocuments] = useState<File[]>([]);
 
