@@ -108,6 +108,22 @@ const Register: React.FC = () => {
     setSuccess(null);
   };
 
+  const handlePrivacyAccept = () => {
+    setPrivacyAccepted(true);
+    setShowPrivacyNotice(false);
+    setError(null);
+    // Continue with registration if form data exists
+    if (formData) {
+      setStep('otp');
+      setSuccess('Please verify your phone number to complete registration.');
+    }
+  };
+
+  const handlePrivacyClose = () => {
+    setShowPrivacyNotice(false);
+    setError('You must accept the privacy policy to continue with registration.');
+  };
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const fileArray = Array.from(e.target.files);
