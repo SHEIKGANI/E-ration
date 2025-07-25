@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { UserPlus, AlertCircle, CheckCircle, Upload, X } from 'lucide-react';
 import OTPVerification from '../components/OTPVerification';
+import PrivacyNotice from '../components/PrivacyNotice';
 
 interface RegisterFormData {
   name: string;
