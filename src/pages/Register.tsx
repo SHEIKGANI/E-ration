@@ -186,6 +186,13 @@ const Register: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Privacy Notice */}
+        <PrivacyNotice
+          isOpen={showPrivacyNotice}
+          onClose={handlePrivacyClose}
+          onAccept={handlePrivacyAccept}
+        />
       </div>
     );
   }
